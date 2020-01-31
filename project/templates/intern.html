@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block body %}
+    <div class="row">
+        {% for user in users %}
+      <div class="col-sm-6">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Internship Registration Details</div>
+          <div class="panel-body">Here are your information {{ user.name }}</div>
+        </div>
+  
+        <div class="panel panel-info">
+          <div class="panel-heading">Registered Information</div>
+          <!-- the use of the strftime() function on the datetime values.
+          This is a powerful function that provides the formatting for
+          the datetime values into a more readable (ie. non-database looking) format for displaying to the user -->
+          
+          <div class="panel-body">Full Name: {{ user.name }}</div>
+          <div class="panel-body">School: {{ user.school }}</div>
+          <div class="panel-body">Department: {{ user.department }}</div>
+          <div class="panel-body">Phone: {{ user.phone }}</div>
+          <div class="panel-body">Email: {{ user.email }}</div>
+          <div class="panel-body">Duration: {{ user.duration }}</div>
+          <div class="panel-body">Interview Date: {{ user.int_date.strftime("%A %B %d, %Y") }}</div>
+          <div class="panel-body">Interview Time: {{ user.int_time }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+
+{% endblock %}

@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+{% block body %}
+
+	<div class="container-contact100">
+		<div class="contact100-map" id="google_map" data-map-x="40.722047" data-map-y="-73.986422" data-pin="/static/images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div>
+
+		<div class="wrap-contact100">
+			<div class="contact100-form-title" style="background-image: url(/static/images/bg-01.png);">
+				<span class="contact100-form-title-1">
+					APPLICATION FORM
+				</span>
+
+				<span class="contact100-form-title-2">
+					Please register with valid information
+				</span>
+			</div>
+
+			<form class="contact100-form validate-form" action="{{ url_for('register') }}" method="post" >
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<span class="label-input100">Full Name:</span>
+					<input class="input100" type="text" name="name" placeholder="Enter full name">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<span class="label-input100">School:</span>
+					<input class="input100" type="text" name="school" placeholder="Enter your school name">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<span class="label-input100">Department:</span>
+					<input class="input100" type="text" name="department" placeholder="Enter your department">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<span class="label-input100">Phone:</span>
+					<input class="input100" type="text" name="phone" placeholder="Enter your whatsapp number">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<span class="label-input100">Duration:</span>
+					<select class="input100" name="duration">
+						<option disabled selected>Select Months</option>
+						<option value="3 months">3 Months</option>
+						<option value="4 months">4 Months</option>
+						<option value="5 months">5 Months</option>
+						<option value="6 months">6 Months</option>
+						<option value="7 months">7 Months</option>
+						<option value="8 months">8 Months</option>
+						<option value="9 months">9 Months</option>
+						<option value="10 months">10 Months</option>
+						<option value="11 months">11 Months</option>
+						<option value="12 months">12 Months</option>
+					</select>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<span class="label-input100">Email:</span>
+					<input class="input100" type="text" name="email" placeholder="Enter email addess">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Message is required">
+					<span class="label-input100">Reason:</span>
+					<textarea class="input100" name="message" placeholder="Why did you choose nHub?"></textarea>
+					<span class="focus-input100"></span>
+				</div>
+				<fieldset style=" border:2px;">
+				<!-- <iframe src="http://free.timeanddate.com/clock/i74rtk20/n1972/szw110/szh110/hoc222/hbw6/cf100/hgr0/hcw2/hcd88/fan2/fas20/fdi70/mqc000/mqs3/mql13/mqw4/mqd94/mhc000/mhs3/mhl13/mhw4/mhd94/mmc000/mml5/mmw1/mmd94/hwm2/hhs2/hhb18/hms2/hml80/hmb18/hmr7/hscf09/hss1/hsl90/hsr5" frameborder="0" width="110" height="110"></iframe> -->
+
+					<legend>Choose interview Date & Time</legend>
+					<div class="wrap-input100 validate-input" >
+						<span class="label-input100">Date:</span>
+						<input class="input100" type="date" name="int_date" required >
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input">
+						<span class="label-input100">Time:</span>
+						<input class="input100" type="time" name="int_time" required>
+						<span class="focus-input100"></span>
+					</div>
+				</fieldset>
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						<span>
+							Submit
+							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+		
+	</div>
+	
+{% endblock %}
